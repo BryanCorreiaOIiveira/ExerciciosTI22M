@@ -13,19 +13,19 @@ namespace Exercicios
         private double area;
         private double IMC;
         //Método Contrutor
-        public ExeciciosModel() 
-        { 
-        
-            this.area= 0;
-            this.IMC= 0;
+        public ExeciciosModel()
+        {
+
+            this.area = 0;
+            this.IMC = 0;
         }//fim do Contrutor
 
         //Método GET e SET
 
         public double ModificarArea
         {
-            get { return this.area;}
-            set { this.area = value;}
+            get { return this.area; }
+            set { this.area = value; }
         }//fim do método getset
 
         public double ModificarIMC
@@ -42,7 +42,7 @@ namespace Exercicios
 
         //2. leia um número e exiba sua metade
 
-        public int Metade(int num) 
+        public int Metade(int num)
         {
             return num / 2;
         }//fim do método
@@ -127,8 +127,65 @@ namespace Exercicios
             }
             return resultado;
         }//fim do IMC
-       
 
+        public double ConverteDolarReral(double valordolar, double cotacao)
+        {
+            if (valordolar <= 0 || cotacao <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return valordolar * cotacao;
+            }
+        } //fim do método
 
+        public double PerimetroQuadrado(double lado)
+        {
+            if (lado <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return lado * 4;
+            }
+        }//fim do método 
+
+        public double ConveterHorasParaMinutos(double horas)
+        {
+            if (horas <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return horas * 60;
+            }
+        }//fim do método
+
+        public double LeiaUmNumeroEExibal10Dele(double num)
+        {
+            return num * 0.10;
+
+        }//fim do método
+
+        public double LeiaUmNumeroEExibal25Dele(double num)
+        {
+            return num * 0.25;
+
+        }//fim do método
+        
+        public double LeiaUmNúmeroEExibaSeuValorAbsoluto(double num)
+        {
+            if (num <= 0)
+            {
+                return num * -1;
+            }
+            else
+            {
+                return num;
+            }
+        }//fim do método
     }//fim do classe
 }//fim do projeto
