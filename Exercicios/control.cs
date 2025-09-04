@@ -36,7 +36,11 @@ namespace Exercicios
                               "\n8. Exercício 8" +
                               "\n9. Exercício 9" +
                               "\n10. Exercício 10" +
-                              "\n16. Exercício 16");
+                              "\n11. Exercício 11" +
+                              "\n12. Exercício 12" +
+                              "\n13. Exercício 13" +
+                              "\n16. Exercício 16" +
+                              "\n23. Exercício 23");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do método MostrarMenu
 
@@ -172,13 +176,37 @@ namespace Exercicios
                         break;
                     case 10:
                         Console.WriteLine("Exercícios 10");
-                        Console.WriteLine("informe leia um número e exiba seu valor absoluto!");
+                        Console.WriteLine("leia um número e exiba seu valor absoluto!");
                         nume = Convert.ToDouble(Console.ReadLine());
 
                         resultado = modelo.LeiaUmNúmeroEExibaSeuValorAbsoluto(nume);
                         Console.WriteLine(resultado);
                         break;
+                    case 11:
+                        Console.WriteLine("Exercícios 11");
+                        Console.WriteLine("converta um valor de quilômetros para metros");
+                        double metro = Convert.ToDouble(Console.ReadLine());
 
+                        resultado= modelo.ConvertaUmaValorDeQuilômetrosParaMetros(metro);
+                        Console.WriteLine(resultado);
+                        break;
+                    case 12:
+                        Console.WriteLine("Exercíocios12");
+                        Console.WriteLine("informe um número: ");
+                        double numero = Convert.ToDouble(Console.ReadLine());
+
+                        resultado=modelo.LeiaUmMúmeroEExibaSuaQuintaPotência(numero);
+                        Console.WriteLine($"O resultado de {numero} Multiplicado por ele mesmo cinco vezes é: {resultado}");
+                        break;
+                    case 13:
+                        Console.WriteLine("Exercícios 13");
+                        Console.WriteLine("calcule o tempo de uma viagem com base na distância e velociadade");
+                        double tempo = Convert.ToDouble(Console.ReadLine());
+
+                        resultado = modelo.CalculeOTempoDeUmeViagemComBaseNaDistânciaEVelocidade(tempo);
+                        Console.WriteLine($"O resultado de {tempo}");
+                        break;
+                    case 14:
                     case 16:
                         Console.WriteLine("Exercícios 16");
                         Console.WriteLine("informe o seu peso: ");
@@ -189,10 +217,17 @@ namespace Exercicios
                         //Mostrar
                         Console.WriteLine(modelo.CalcularIMC(peso, altura));
                         break;
-                    default:
-                        Console.WriteLine("opção escolhida não é válido");
-                        break;
+                    case 23:
+                        Console.WriteLine("Exercícios 23");
+                        Console.WriteLine("Informe um número: ");
+                        num = Convert.ToInt32(Console.ReadLine());
 
+                        //Mostrar
+                        Console.WriteLine($"A soma dos digitos é: {modelo.ContarLetras(num)}");
+                        break;
+                    default:
+                        Console.WriteLine("Opção escolhida não é válida!");
+                        break;
                 }//fim do escolha       
             } while (ModificarOpcao != 0);
         }//fim do método
