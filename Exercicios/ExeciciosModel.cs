@@ -175,7 +175,7 @@ namespace Exercicios
             return num * 0.25;
 
         }//fim do método
-        
+
         public double LeiaUmNúmeroEExibaSeuValorAbsoluto(double num)
         {
             if (num <= 0)
@@ -206,17 +206,46 @@ namespace Exercicios
             return Math.Pow(num, 5);
         }//fim do método
 
-        public double CalculeOTempoDeUmeViagemComBaseNaDistânciaEVelocidade(double tempo)
+        public double CalcularTempo(double distancia, double velocidade)
         {
-            if (horas <= 0)
+            return distancia / velocidade;
+        }//fim do método
+
+        public double CalcularConsumo(double km, double litros)
+        {
+            return km / litros;
+        }
+
+        public int CacularFatorial(int num)
+        {
+            int fatorial = 1;
+            for (int i = num; i > 0; i--)
             {
-                return -1;
+                fatorial *= i;
             }
-            else
-            {
-                return horas * 60;
-            }
-        }    
+            return fatorial;
+        }//fim do método
+
+        public double CalculeSalario(double valor)
+        {
+            return 12 * valor;
+        }//fim do método
+
+        public double LeiaLog(int num)
+        { 
+            return Math.Log(num);
+        }//fim do método
+
+
+        public double LeiaSeno(int num)
+        {
+            return Math.Sin(num);
+        }
+
+        public double LeiaCosseno(int num)
+        {
+            return Math.Cos(num);
+        }
         public int ContarLetras(int num)
         {
             int somar = 0;
@@ -233,6 +262,9 @@ namespace Exercicios
             }//fim do for
             return somar;
         }//fim do método
+
+
+
 
     }//fim do classe
 }//fim do projeto

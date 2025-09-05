@@ -39,7 +39,13 @@ namespace Exercicios
                               "\n11. Exercício 11" +
                               "\n12. Exercício 12" +
                               "\n13. Exercício 13" +
+                              "\n14. Exercício 14" +
+                              "\n15. Exercício 15" +
                               "\n16. Exercício 16" +
+                              "\n17. Exercício 17" +
+                              "\n18. Exercício 18" +
+                              "\n19. Exercício 19" +
+                              "\n20. Exercício 20" +
                               "\n23. Exercício 23");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do método MostrarMenu
@@ -87,14 +93,14 @@ namespace Exercicios
                         {
                             Console.WriteLine($"0 valor U${dolar} em real é R$ {resultado}");
                         }
-                        break ; 
+                        break;
                     case 4:
                         Console.WriteLine("Exercício 04");
                         Console.WriteLine("informe o lado");
                         double lado = Convert.ToDouble(Console.ReadLine());
 
                         resultado = modelo.PerimetroQuadrado(lado);
-                        if(resultado == -1)
+                        if (resultado == -1)
                         {
                             Console.WriteLine("Impossívelm calcular perímetro negativo!");
                         }
@@ -102,14 +108,14 @@ namespace Exercicios
                         {
                             Console.WriteLine($"0 perímetro é {resultado}");
                         }
-                        break ;
+                        break;
                     case 5:
                         Console.WriteLine("Exercício 05");
                         Console.WriteLine("informe o horas Minutos");
                         double horas = Convert.ToDouble(Console.ReadLine());
 
                         resultado = modelo.ConveterHorasParaMinutos(horas);
-                        if(resultado == -1) 
+                        if (resultado == -1)
                         {
                             Console.WriteLine("impossívelm multiplicar por número negativo!");
                         }
@@ -117,7 +123,7 @@ namespace Exercicios
                         {
                             Console.WriteLine($"o resultado é {resultado}");
                         }
-                        break ;
+                        break;
                     case 6:
                         Console.WriteLine("Exercício 06");
                         Console.WriteLine("informe o num 10%");
@@ -127,17 +133,17 @@ namespace Exercicios
                         {
                             Console.WriteLine($"o resultado é {resultado}");
                         }
-                        break ;
+                        break;
                     case 7:
                         Console.WriteLine("Exercício 07");
                         Console.WriteLine("informe o num 25%");
-                        nume = Convert.ToDouble(Console.ReadLine()) ;
+                        nume = Convert.ToDouble(Console.ReadLine());
 
                         resultado = modelo.LeiaUmNumeroEExibal25Dele(nume);
                         {
                             Console.WriteLine($"o resultado é {resultado}");
                         }
-                        break ;
+                        break;
                     case 8:
                         Console.WriteLine("Exercício 08");
                         Console.WriteLine("Informe a diagonal maior");
@@ -187,7 +193,7 @@ namespace Exercicios
                         Console.WriteLine("converta um valor de quilômetros para metros");
                         double metro = Convert.ToDouble(Console.ReadLine());
 
-                        resultado= modelo.ConvertaUmaValorDeQuilômetrosParaMetros(metro);
+                        resultado = modelo.ConvertaUmaValorDeQuilômetrosParaMetros(metro);
                         Console.WriteLine(resultado);
                         break;
                     case 12:
@@ -195,18 +201,39 @@ namespace Exercicios
                         Console.WriteLine("informe um número: ");
                         double numero = Convert.ToDouble(Console.ReadLine());
 
-                        resultado=modelo.LeiaUmMúmeroEExibaSuaQuintaPotência(numero);
+                        resultado = modelo.LeiaUmMúmeroEExibaSuaQuintaPotência(numero);
                         Console.WriteLine($"O resultado de {numero} Multiplicado por ele mesmo cinco vezes é: {resultado}");
                         break;
                     case 13:
                         Console.WriteLine("Exercícios 13");
-                        Console.WriteLine("calcule o tempo de uma viagem com base na distância e velociadade");
-                        double tempo = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a distancia: ");
+                        double distancia = Convert.ToDouble(Console.ReadLine());
 
-                        resultado = modelo.CalculeOTempoDeUmeViagemComBaseNaDistânciaEVelocidade(tempo);
-                        Console.WriteLine($"O resultado de {tempo}");
+                        Console.WriteLine("Infome o velocidade: ");
+                        double velocidade = Convert.ToDouble(Console.ReadLine());
+
+                        resultado = modelo.CalcularTempo(distancia, velocidade);
+                        Console.WriteLine($"O resultado de {resultado}");
                         break;
                     case 14:
+                        Console.WriteLine("Exercícios 14");
+                        Console.WriteLine("Informe km: ");
+                        double km = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Informe litros: ");
+                        double litros = Convert.ToDouble(Console.ReadLine());
+
+                        resultado = modelo.CalcularConsumo(km, litros);
+                        Console.WriteLine($"O resultado de {resultado}");
+                        break;
+                    case 15:
+                        Console.WriteLine("Exercícios 15");
+                        Console.WriteLine("informe número: ");
+                        int numer = Convert.ToInt32(Console.ReadLine());
+
+                        resultado = modelo.CacularFatorial(numer);
+                        Console.WriteLine($"O resultado de {resultado}");
+                        break;
                     case 16:
                         Console.WriteLine("Exercícios 16");
                         Console.WriteLine("informe o seu peso: ");
@@ -217,6 +244,39 @@ namespace Exercicios
                         //Mostrar
                         Console.WriteLine(modelo.CalcularIMC(peso, altura));
                         break;
+                    case 17:
+                        Console.WriteLine("Exercício 17");
+                        Console.WriteLine("informe o Salario");
+                        double valor = Convert.ToDouble(Console.ReadLine());
+
+                        resultado = modelo.CalculeSalario(valor);
+                        Console.WriteLine($"O Salario e {resultado}");
+                        break;
+                    case 18:
+                        Console.WriteLine("Exercício 18");
+                        Console.WriteLine("informe um número");
+                        int log = Convert.ToInt32(Console.ReadLine());
+
+                        resultado = modelo.LeiaLog(log);
+                        Console.WriteLine($"O logaritmo e {resultado}");
+                        break;
+                    case 19 :
+                        Console.WriteLine("Execicio 19");
+                        Console.WriteLine("informe um número");
+                        int sin = Convert.ToInt32(Console.ReadLine());
+
+                        resultado = modelo.LeiaSeno(sin);
+                        Console.WriteLine($"O seno e {resultado}");
+                        break;
+                    case 20:
+                        Console.WriteLine("Execício 20");
+                        Console.WriteLine("informe um número");
+                        int cos = Convert.ToInt32(Console.ReadLine());
+
+                        resultado = modelo.LeiaCosseno(cos);
+                        Console.WriteLine($"O cosseno e {resultado}");
+                        break; 
+                    case 21:
                     case 23:
                         Console.WriteLine("Exercícios 23");
                         Console.WriteLine("Informe um número: ");
