@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,12 +16,16 @@ namespace Exercicios
         //Área de variáveis
         private double area;
         private double IMC;
+        public int[] vet;
+        public string[] nomes;
         //Método Contrutor
         public ExeciciosModel()
         {
 
             this.area = 0;
             this.IMC = 0;
+            this.vet = new int[10];
+            this.nomes = new string[10];
         }//fim do Contrutor
 
         //Método GET e SET
@@ -263,8 +271,128 @@ namespace Exercicios
             return somar;
         }//fim do método
 
+        //Leia 10 números e armazene em um vetor
+        public void PreecherVet()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"{i + 1}ª Posição: ");
+                vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim de for
+        }//fim de método
 
 
+        //criar um método para MOSTRAR O VETOR
 
+        //1. Leia 10 números e armazene em um vetor.
+        public void MostrarVet()
+        {
+            for(int i = 0; i < 10;i++)
+            {
+
+                Console.WriteLine($"{i + 1}ª posição: {vet[i]}");
+            }//fim do método
+        }//fim do método
+
+        //2. Leia 10 números e exiba-os na ordem inversa
+        public void MostrarInverso()
+        {
+            for( int i = 9; i >= 0; i--)
+            {
+                Console.WriteLine($"{i+1}ª Posição: {vet[i]}");
+            }//fim do for
+        }//fim do método
+
+        //3. Leia 10 números e exibar apenas os pares.
+        public void MostrarPares()
+        {
+            for( int i = 0; i < 10; i++)
+            {
+                if (vet[i] % 2 == 0)
+                {
+                    Console.WriteLine(vet[i]);
+                }//fim do if
+            }//fim do for
+        }//fim do método
+        
+        //4. Leia 10 números e exiba a média.
+        public void MostrarMédia()
+        {
+            double soma = 0;
+            for (int i = 0; i < 10; i++) 
+            {
+                soma += vet[i];   
+            }//fim do for
+            Console.WriteLine($"Média é: {soma / 10}");
+        }//fim do método
+
+        //5. Leia 10 nome e exiba os que começam com "a".
+        public void PreencherNomes()
+        {
+           for (int i = 0;i < 10;i++)
+           {
+                Console.WriteLine($"{i + 1}ª Posição: ");
+                nomes[i] = (Console.ReadLine());
+           }//fim do for
+        }//fim do método
+
+        public void Buscarnomescomecacoma()
+        {
+            for (int i = 0;i < 10;i++)
+            {
+                if(nomes[i].Substring(0,1) == "a")
+                {
+                    Console.WriteLine(nomes[i]);
+                }//fim do if
+            }//fim do for
+        }//fim do método
+
+        //6. Leia 10 números e conte quantos são maiores que a média.
+        public void MostrarMédiaMaiores()
+        {
+            double soma = 0;
+            for(int i = 0;i < 10; i++)
+            {
+               soma += vet[i];
+            }//fim do for
+            double media = soma/ 10;
+            Console.WriteLine($"média é: {media}");
+            int contador = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                if (vet[i] > media)
+                {
+                    contador++;
+                }//fim do if
+            }//fim do for
+            Console.WriteLine(contador);
+        }//fim do método
+
+        //7. leia 10 idades e exiba a maior.
+
+        public void MostrarIdadesMaior()
+        {
+            int idades = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                if (vet[i] > idades)
+                {
+                    idades = vet[i];
+                }//fim do if
+            }//fim do for 
+            Console.WriteLine($"o maior elemento é: {idades}");
+        }//fim do método
+
+        //8. leia 10 altura e exibar a média.
+
+        public void MostrarAlturarMédia()
+        {
+            double altura= 0;
+            for (int i = 0; i < 10; i++)
+            {
+                altura += vet[i];
+            }//fim do for
+            Console.WriteLine($"Média é: {altura / 10}");
+        }//fim do método
     }//fim do classe
 }//fim do projeto

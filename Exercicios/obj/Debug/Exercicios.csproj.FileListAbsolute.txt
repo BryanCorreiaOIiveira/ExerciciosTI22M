@@ -6,3 +6,11 @@ C:\Users\bryan.hcoliveira\source\repos\Exercicios\Exercicios\obj\Debug\Exercicio
 C:\Users\bryan.hcoliveira\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.csproj.CoreCompileInputs.cache
 C:\Users\bryan.hcoliveira\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.exe
 C:\Users\bryan.hcoliveira\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.pdb
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\bin\Debug\Exercicios.exe.config
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\bin\Debug\Exercicios.exe
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\bin\Debug\Exercicios.pdb
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\obj\Debug\Exercicios.csproj.AssemblyReference.cache
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\obj\Debug\Exercicios.exe.config
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\obj\Debug\Exercicios.csproj.CoreCompileInputs.cache
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\obj\Debug\Exercicios.exe
+C:\Users\bryan.hcoliveira\source\repos\ExerciciosTI22M\Exercicios\obj\Debug\Exercicios.pdb

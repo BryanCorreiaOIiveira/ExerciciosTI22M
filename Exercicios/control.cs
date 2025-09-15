@@ -46,7 +46,16 @@ namespace Exercicios
                               "\n18. Exercício 18" +
                               "\n19. Exercício 19" +
                               "\n20. Exercício 20" +
-                              "\n23. Exercício 23");
+                              "\n23. Exercício 23" +
+                              "\n31. Exercício 31" +
+                              "\n32. Exercício 32" +
+                              "\n33. Exercício 33" +
+                              "\n34. Exercício 34" +
+                              "\n35. Exercício 35" +
+                              "\n36. Exercício 36" +
+                              "\n37. Exercício 37" +
+                              "\n38. Exercício 38" 
+                              );
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do método MostrarMenu
 
@@ -285,7 +294,57 @@ namespace Exercicios
                         //Mostrar
                         Console.WriteLine($"A soma dos digitos é: {modelo.ContarLetras(num)}");
                         break;
-                    default:
+                    
+                    case 31:
+                        Console.WriteLine("Exercício 31 - vetor");
+                        //Preencher o vetor
+                        modelo.PreecherVet();
+                        modelo.MostrarVet();
+                        break;
+                    case 32:
+                        Console.WriteLine("Exercício 32 - Vetor");
+                        //PreencherVetor
+                        modelo.PreecherVet();
+                        modelo.MostrarInverso();
+                     break;
+                    case 33:
+                        Console.WriteLine("Exercício 33 - Vetor");
+                        //PreencherVetor
+                        modelo.PreecherVet();
+                        modelo.MostrarPares();
+                        break;
+                    case 34:
+                        Console.WriteLine("Exercício 34 - vetor");
+                        //PreencherVetor
+                        modelo.PreecherVet();
+                        modelo.MostrarMédia();
+                        break;
+                    case 35:
+                        Console.WriteLine("Exercício 35 - vetor");
+                        //Preenchervetor
+                        modelo.PreencherNomes();
+                        modelo.Buscarnomescomecacoma();
+                        break;
+                    case 36:
+                        Console.WriteLine("Exercício 36 - vetor");
+                        //Preenchervetor
+                        modelo.PreecherVet();
+                        modelo.MostrarMédiaMaiores();
+                        break;
+                    case 37:
+                        Console.WriteLine("Exercício 37 - vetor");
+                        //Preenchervetor
+                        modelo.PreecherVet();
+                        modelo.MostrarIdadesMaior();
+                        break;
+                    case 38:
+                        Console.WriteLine("Exercício 38 - vetor");
+                        //Preenchervetor
+                        modelo.PreecherVet();
+                        modelo.MostrarAlturarMédia();
+                    break;
+
+                    default:  
                         Console.WriteLine("Opção escolhida não é válida!");
                         break;
                 }//fim do escolha       
