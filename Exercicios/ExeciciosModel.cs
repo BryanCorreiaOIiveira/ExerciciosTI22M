@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters;
 using System.Security.Cryptography.X509Certificates;
@@ -18,6 +21,7 @@ namespace Exercicios
         private double IMC;
         public int[] vet;
         public string[] nomes;
+        public int[ , ] matriz;//Declarar a Matriz - Cria
         //Método Contrutor
         public ExeciciosModel()
         {
@@ -26,6 +30,9 @@ namespace Exercicios
             this.IMC = 0;
             this.vet = new int[10];
             this.nomes = new string[10];
+            //instanciar a matriz
+            this.matriz = new int [3, 3] ;//Criando uma Matriz3x3
+            this.matriz = new int [4, 4] ;//Criando uma Matriz4x4
         }//fim do Contrutor
 
         //Método GET e SET
@@ -387,12 +394,98 @@ namespace Exercicios
 
         public void MostrarAlturarMédia()
         {
-            double altura= 0;
+            double altura = 0;
             for (int i = 0; i < 10; i++)
             {
                 altura += vet[i];
             }//fim do for
             Console.WriteLine($"Média é: {altura / 10}");
+        }//Fim do método
+
+        //criar o preenche matriz - método de preencher
+
+        public void PreencherMatriz()
+        {
+            for (int linha = 0; linha <= 2; linha++)
+            {
+                for (int coluna = 0; coluna <= 2; coluna++)
+                {
+                    Console.WriteLine($" matriz {linha} {coluna}: ");
+                    this.matriz[linha,coluna] = Convert.ToInt32(Console.ReadLine());
+                }//Fim do for de coluna
+            }//Fim do for de linha
         }//fim do método
+
+        public void MostrarMatriz()
+        {
+            for (int linha = 0; linha <= 2; linha++)
+            {
+                for (int coluna = 0; coluna <= 2; coluna++)
+                {
+                    Console.Write($"{matriz[linha, coluna]} ");
+                }//Fim da coluna
+                Console.WriteLine("");//Pular linha
+            }//Fim da linha
+        }//fim do método
+
+        public void PreencherZero()
+        { 
+            for(int linha = 0;linha <= 2; linha++)
+            {
+                for (int coluna = 0;coluna <= 2; coluna++)
+                {
+                    if (linha == coluna)
+                    {
+                        matriz[linha, coluna] = 0;
+                    }
+                    else
+                    {
+                        matriz[linha, coluna] = 1;
+                    }
+                }//Fim do for de coluna
+            }//Fim do for de linha
+        }//fim do método
+
+        public void SomarMatriz()
+        {
+            int soma = 0;
+            for (int linha = 0; linha <= 2; linha++)
+            {
+                for (int coluna = 0; coluna <= 2; coluna++)
+                {
+
+                    soma += matriz[linha, coluna];
+
+                }//Fim do for de coluna
+            }//Fim do for linha
+            Console.WriteLine($"a soma e {soma}");
+        }//Fim do método
+
+        public void MostrarMatriz1()
+        {
+            for (int linha = 0; linha <= 3; linha++)
+            {
+                for (int coluna = 0; linha <= 3; coluna++)
+                {
+                    Console.WriteLine($"matriz {linha} {coluna}: ");
+                    matriz[linha, coluna] = Convert.ToInt32(Console.ReadLine());
+                }//Fim do for coluna
+                Console.WriteLine("");//Pular Linha
+            }//Fim do for linha
+        }//Fim do método
+        
+
+            public void MediaMatriz()
+            { 
+                int soma = 0;
+                for(int linha = 0;linha<= 3; linha++)
+                {
+                    for(int coluna = 0;coluna<= 3; coluna++)
+                    {
+                        soma += matriz[linha, coluna];  
+                    }//Fim do for coluna
+                }//Fim do  for linha
+                Console.WriteLine($"a Média e = {soma / 16}");
+            }//Fim do método
     }//fim do classe
 }//fim do projeto

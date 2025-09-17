@@ -54,7 +54,11 @@ namespace Exercicios
                               "\n35. Exercício 35" +
                               "\n36. Exercício 36" +
                               "\n37. Exercício 37" +
-                              "\n38. Exercício 38" 
+                              "\n38. Exercício 38" +
+                              "\n39. Exercício 39" +
+                              "\n40. Exercício 40" +
+                              "\n41. Exercício 41" +
+                              "\n42. Exercício 42"
                               );
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do método MostrarMenu
@@ -343,9 +347,33 @@ namespace Exercicios
                         modelo.PreecherVet();
                         modelo.MostrarAlturarMédia();
                     break;
+                    case 39:
+                        Console.WriteLine("Exercício 39 - Matriz");
+                        //PreecherMatriz
+                        modelo.PreencherMatriz();
+                        modelo.MostrarMatriz();
+                    break;
+                    case 40:
+                        Console.WriteLine("Exercício - 40 Matriz");
+                        //Preencher a Matriz e Mostrar
+                        modelo.PreencherZero();
+                        modelo.MostrarMatriz();
+                    break;
+                    case 41:
+                        Console.WriteLine("Exercício - 41 Matriz");
+                        //PreencherSoma
+                        modelo.PreencherMatriz();
+                        modelo.SomarMatriz();
+                    break;
+                    case 42:
+                        Console.WriteLine("Exercício - 42 Matriz");
+                        //Preencher a Matriz 4 Mostrar
+                        modelo.MostrarMatriz1();
+                        modelo.MediaMatriz();
+                    break;
 
-                    default:  
-                        Console.WriteLine("Opção escolhida não é válida!");
+                        default:
+                            Console.WriteLine("Opção escolhida não é válida!");
                         break;
                 }//fim do escolha       
             } while (ModificarOpcao != 0);
