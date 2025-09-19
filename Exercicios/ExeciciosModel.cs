@@ -22,6 +22,7 @@ namespace Exercicios
         public int[] vet;
         public string[] nomes;
         public int[ , ] matriz;//Declarar a Matriz - Cria
+        public int[,] matriz1;//Declarar a Matriz - Cria
         //Método Contrutor
         public ExeciciosModel()
         {
@@ -32,7 +33,7 @@ namespace Exercicios
             this.nomes = new string[10];
             //instanciar a matriz
             this.matriz = new int [3, 3] ;//Criando uma Matriz3x3
-            this.matriz = new int [4, 4] ;//Criando uma Matriz4x4
+            this.matriz1 = new int [4, 4] ;//Criando uma Matriz4x4
         }//fim do Contrutor
 
         //Método GET e SET
@@ -465,10 +466,10 @@ namespace Exercicios
         {
             for (int linha = 0; linha <= 3; linha++)
             {
-                for (int coluna = 0; linha <= 3; coluna++)
+                for (int coluna = 0; coluna <= 3; coluna++)
                 {
                     Console.WriteLine($"matriz {linha} {coluna}: ");
-                    matriz[linha, coluna] = Convert.ToInt32(Console.ReadLine());
+                    matriz1[linha, coluna] = Convert.ToInt32(Console.ReadLine());
                 }//Fim do for coluna
                 Console.WriteLine("");//Pular Linha
             }//Fim do for linha
@@ -478,14 +479,60 @@ namespace Exercicios
             public void MediaMatriz()
             { 
                 int soma = 0;
-                for(int linha = 0;linha<= 3; linha++)
+                for(int linha = 0;linha <= 3; linha++)
                 {
-                    for(int coluna = 0;coluna<= 3; coluna++)
+                    for(int coluna = 0;coluna <= 3; coluna++)
                     {
-                        soma += matriz[linha, coluna];  
+                        soma += matriz1[linha, coluna];  
                     }//Fim do for coluna
                 }//Fim do  for linha
                 Console.WriteLine($"a Média e = {soma / 16}");
             }//Fim do método
+
+            public void DiagonalPrincipal()
+            {
+                for (int linha = 0; linha <= 2; linha++)
+                {
+                    for (int coluna = 0; coluna <= 2; coluna++)
+                    {
+
+                        if (linha == coluna)
+                        {
+                            Console.WriteLine($"Diagonal é: {matriz[linha,coluna]}");
+                        }//fim do if
+                    }//fim do coluna
+                }//fim do linha
+            }//fim do método
+
+            public void DiagonalSecundária()
+            { 
+                for ( int linha = 0; linha <= 2; linha++)
+                { 
+                    for (int coluna =0; coluna <= 2;coluna++)
+                    {
+                        if(linha + coluna == 2)
+                        {
+                            Console.WriteLine($"Diagonal Secundária é: {matriz[linha,coluna]}");
+                        }//fim do if
+                    }//fim do for coluna
+                }//fim do for linha
+            }//fim do método
+
+        public void ContaElementos()
+        {
+            int contar = 0;
+            for (int linha = 0; linha <= 3; linha++)
+            {
+                for (int coluna = 0; coluna <= 3; coluna++)
+                {
+                    if (matriz1[linha,coluna] > 10)
+                    {
+                        contar++;
+                    }//fim do if
+                }//fim do for coluna
+            }//fim do for linha
+            Console.WriteLine($"Há {contar} números maiores que 10");
+        }//fim do método
+        
     }//fim do classe
 }//fim do projeto

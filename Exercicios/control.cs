@@ -58,7 +58,10 @@ namespace Exercicios
                               "\n39. Exercício 39" +
                               "\n40. Exercício 40" +
                               "\n41. Exercício 41" +
-                              "\n42. Exercício 42"
+                              "\n42. Exercício 42" +
+                              "\n43. Exercício 43" +
+                              "\n44. Exercício 44" +
+                              "\n45. Exercício 45"
                               );
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do método MostrarMenu
@@ -371,6 +374,25 @@ namespace Exercicios
                         modelo.MostrarMatriz1();
                         modelo.MediaMatriz();
                     break;
+                    case 43:
+                        Console.WriteLine("Exercício - 43 Matriz");
+                        //Preencher a Matriz 3
+                        modelo.PreencherMatriz();
+                        modelo.DiagonalPrincipal();
+                    break;
+                    case 44:
+                        Console.WriteLine("Exercício - 44 Matriz");
+                        //Preencher a Matriz  4
+                        modelo.PreencherMatriz();
+                        modelo.DiagonalSecundária();
+                    break;
+                    case 45:
+                        Console.WriteLine("Exercício - 45 Matriz");
+                        //Preencher a Matriz 5
+                        modelo.MostrarMatriz1();
+                        modelo.ContaElementos();
+                    break;
+
 
                         default:
                             Console.WriteLine("Opção escolhida não é válida!");
